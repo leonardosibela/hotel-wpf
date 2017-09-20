@@ -24,14 +24,8 @@ namespace Hotel
             InitializeComponent();
         }
 
-        private void txtQtdDias_TextChanged(object sender, TextChangedEventArgs e)
+        private void atualizarValor()
         {
-            atualizarValor();
-        }
-
-
-
-        private void atualizarValor() {
             if (txtQtdDias.Text.Length == 0)
             {
                 lblTotal.Content = "R$0,00";
@@ -51,6 +45,11 @@ namespace Hotel
 
             double total = totalDiario * qtdDias;
             lblTotal.Content = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", total);
+        }
+
+        private void txtQtdDias_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            atualizarValor();
         }
 
         private void radNormal_Checked(object sender, RoutedEventArgs e)
@@ -96,6 +95,19 @@ namespace Hotel
         private void chkWifi_Unchecked(object sender, RoutedEventArgs e)
         {
             atualizarValor();
+        }
+
+        private void btnRegistrar_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult resultado = MessageBox.Show(
+                "Tem certeza que deseja registrar o quarto com que foi selecionado?",
+                "Registro de Quarto", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (resultado == MessageBoxResult.Yes)
+            {
+                MessageBox.Show("Registro de quarto realizado com sucesso!",
+                "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
     }
 }
