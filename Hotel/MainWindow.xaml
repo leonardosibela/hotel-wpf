@@ -9,21 +9,21 @@
     <Grid>
         <GroupBox x:Name="groupBox" Header="Quartos" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="105" Width="154">
             <Grid HorizontalAlignment="Left" Height="70" Margin="10,10,-3.2,0" VerticalAlignment="Top" Width="134">
-                <RadioButton x:Name="radNormal" Content="Normal" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="radSuperLuxo" Content="Super Luxo" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="radLuxo" Content="Luxo" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radNormal" Content="Normal" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="radNormal_Checked"/>
+                <RadioButton x:Name="radSuperLuxo" Content="Super Luxo" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Checked="radSuperLuxo_Checked"/>
+                <RadioButton x:Name="radLuxo" Content="Luxo" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Checked="radLuxo_Checked"/>
             </Grid>
         </GroupBox>
         <GroupBox x:Name="groupBox1" Header="Adicionais" HorizontalAlignment="Left" Margin="215,10,0,0" VerticalAlignment="Top" Width="154" Height="105">
             <Grid HorizontalAlignment="Left" Height="73" Margin="10,10,-3.2,0" VerticalAlignment="Top" Width="134">
-                <CheckBox x:Name="chkArCondicionado" Content="Ar Condicionado" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                <CheckBox x:Name="chkHidromassagem" Content="Hidromassagem" HorizontalAlignment="Left" Margin="12,31,0,0" VerticalAlignment="Top"/>
-                <CheckBox x:Name="chkWifi" Content="Wi-Fi" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top"/>
+                <CheckBox x:Name="chkArCondicionado" Content="Ar Condicionado" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="chkArCondicionado_Checked" Unchecked="chkArCondicionado_Unchecked"/>
+                <CheckBox x:Name="chkHidromassagem" Content="Hidromassagem" HorizontalAlignment="Left" Margin="12,31,0,0" VerticalAlignment="Top" Checked="chkHidromassagem_Checked" Unchecked="chkHidromassagem_Unchecked"/>
+                <CheckBox x:Name="chkWifi" Content="Wi-Fi" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Checked="chkWifi_Checked" Unchecked="chkWifi_Unchecked"/>
             </Grid>
         </GroupBox>
         <Label x:Name="label" Content="Qtd Dias" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Left" Margin="294,142,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox x:Name="txtQtdDias" HorizontalAlignment="Left" Height="23" Margin="71,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42"/>
+        <TextBox x:Name="txtQtdDias" HorizontalAlignment="Left" Height="23" Margin="71,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" TextChanged="txtQtdDias_TextChanged"/>
         <Label x:Name="lblTotal" Content="R$0,00" HorizontalAlignment="Left" Margin="158,139,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
     </Grid>
 </Window>
